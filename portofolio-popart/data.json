@@ -1,0 +1,729 @@
+[
+  {
+    "id": "masbook",
+    "title": "Masbook: Doom Scrolling",
+    "category": "game",
+    "categoryDisplay": "Mobile deck-builder",
+    "thumbImage": "Images/web/Masbook_Thumbnail.jpg",
+    "images": [
+      "Images/web/Masbook_Thumbnail.jpg",
+      "Images/web/Masbook_ss_1.jpg",
+      "Images/web/Masbook_ss_2.jpg",
+      "Images/web/Masbook_ss_3.jpg",
+      "Images/web/Masbook_ss_4.jpg",
+      "Images/web/Masbook_ss_5.jpg"
+    ],
+    "desc": "A deck-building roguelike about chasing social validation. You scroll a timeline and react to each post with up to 3 memes. Memes give stats, EXP and synergy multipliers, so you win by reading internet culture and matching the mood of the post.",
+    "features": [
+      "Scroll a timeline and answer each post with up to 3 memes",
+      "Memes grant stats, EXP and synergy multipliers",
+      "Deck-building roguelike loop"
+    ],
+    "tech": [
+      "Unity"
+    ],
+    "demoLink": "https://summerland-games.itch.io/doom-scroll",
+    "repoLink": "",
+    "links": [
+      {
+        "label": "Play on itch.io",
+        "url": "https://summerland-games.itch.io/doom-scroll"
+      },
+      {
+        "label": "Google Play",
+        "url": "https://play.google.com/store/apps/details?id=com.SummerLand.Masbook"
+      }
+    ],
+    "recognition": "Top 1 mobile game, GameSeed 2026",
+    "role": "Game designer",
+    "team": "Summerland Games",
+    "tag": "Scroll, react, win with memes.",
+    "tone": 1,
+    "sticker": "TOP 1!",
+    "heroImages": [
+      "Images/web/Masbook_ss_4.jpg",
+      "Images/web/Masbook_ss_3.jpg",
+      "Images/web/Masbook_ss_5.jpg",
+      "Images/web/Masbook_ss_1.jpg"
+    ],
+    "portrait": true
+  },
+  {
+    "id": "warmth",
+    "title": "Warmth & Whistles",
+    "category": "game",
+    "categoryDisplay": "Cozy simulation",
+    "thumbImage": "https://img.itch.zone/aW1nLzMwNDg0NTg5LnBuZw==/original/o%2FRRWK.png",
+    "images": [
+      "https://img.itch.zone/aW1nLzMwNDg0NTg5LnBuZw==/original/o%2FRRWK.png",
+      "https://img.itch.zone/aW1hZ2UvNTA5MTgyMi8zMDQ4MzMzNC5wbmc=/original/LtaqrA.png",
+      "https://img.itch.zone/aW1hZ2UvNTA5MTgyMi8zMDQ4MzMzNi5wbmc=/original/CIKv2W.png",
+      "https://img.itch.zone/aW1hZ2UvNTA5MTgyMi8zMDQ4MzUxMi5wbmc=/original/T66TPb.png"
+    ],
+    "desc": "A cozy, slightly emotional tea house game set in the seven days of Maslenitsa in Suzdal. Brew tea from your samovar, get to know the townspeople, and reach one of two endings. Made in 2 days.",
+    "features": [
+      "Brew tea from your samovar",
+      "Get to know the townspeople",
+      "Two endings, built in 2 days"
+    ],
+    "tech": [
+      "Unity"
+    ],
+    "demoLink": "https://summerland-games.itch.io/warmth-and-whistles",
+    "repoLink": "",
+    "links": [
+      {
+        "label": "Play on itch.io",
+        "url": "https://summerland-games.itch.io/warmth-and-whistles"
+      }
+    ],
+    "recognition": "Audience favorite, Moscow-Indonesia game jam",
+    "role": "Programmer",
+    "team": "Summerland Games",
+    "tag": "Seven days of tea in Suzdal.",
+    "tone": 2,
+    "sticker": "FAN FAVE!",
+    "heroImages": [],
+    "portrait": true
+  },
+  {
+    "id": "dream",
+    "title": "Dream Inc",
+    "category": "game",
+    "categoryDisplay": "Deck-building prototype",
+    "thumbImage": "https://img.itch.zone/aW1nLzI4NDg5OTcyLnBuZw==/original/QLiAg%2F.png",
+    "images": [
+      "https://img.itch.zone/aW1nLzI4NDg5OTcyLnBuZw==/original/QLiAg%2F.png",
+      "https://img.itch.zone/aW1hZ2UvNDYyNDQ0MS8yODQ5MTIzMy5wbmc=/original/5XZvhS.png",
+      "https://img.itch.zone/aW1hZ2UvNDYyNDQ0MS8yODQ5MTE1MC5wbmc=/original/V0wDJN.png"
+    ],
+    "desc": "You are a Dream Controller who manipulates sleep frequencies. Pick exactly 3 cards each turn, balance each patient's brain-wave graph, and keep them out of Nightmare and Insomnia. Every patient has a different starting point and mind.",
+    "features": [
+      "Pick exactly 3 cards every turn",
+      "Balance each patient's brain-wave graph",
+      "Every patient starts differently"
+    ],
+    "tech": [],
+    "demoLink": "https://wahyuunt97.itch.io/dream-inc",
+    "repoLink": "",
+    "links": [
+      {
+        "label": "Play on itch.io",
+        "url": "https://wahyuunt97.itch.io/dream-inc"
+      }
+    ],
+    "recognition": "Top 3 Dreamcubation 2026 GameJam by Genali Studio",
+    "role": "Game designer",
+    "team": "Team of four",
+    "tag": "Keep the patient asleep.",
+    "tone": 3,
+    "sticker": "Top 3",
+    "heroImages": [],
+    "portrait": true
+  },
+  {
+    "id": "fond",
+    "title": "Fond Folding",
+    "category": "game",
+    "categoryDisplay": "Cozy packing puzzle",
+    "thumbImage": "https://img.itch.zone/aW1nLzI4OTUzMDMzLnBuZw==/original/1VENOb.png",
+    "images": [
+      "https://img.itch.zone/aW1nLzI4OTUzMDMzLnBuZw==/original/1VENOb.png",
+      "https://img.itch.zone/aW1hZ2UvNDg0Nzk5Mi8yODk1MzExNi5wbmc=/original/bFaZ8Y.png",
+      "https://img.itch.zone/aW1hZ2UvNDg0Nzk5Mi8yODk1MzExNS5wbmc=/original/e5DtQl.png",
+      "https://img.itch.zone/aW1hZ2UvNDg0Nzk5Mi8yODk1MzExMy5wbmc=/original/9vLECy.png",
+      "https://img.itch.zone/aW1hZ2UvNDg0Nzk5Mi8yODk1MzExMi5wbmc=/original/lTJ6au.png",
+      "https://img.itch.zone/aW1hZ2UvNDg0Nzk5Mi8yODk1MzExNC5wbmc=/original/Sn%2FIah.png",
+      "https://img.itch.zone/aW1hZ2UvNDg0Nzk5Mi8yODk1MzExMS5wbmc=/original/sePI%2Fv.png"
+    ],
+    "desc": "A cozy packing puzzle about moving forward. Roslyn is starting college and leaving a familiar life behind. Help her pack, arrange, and organize her belongings as she travels through the different chapters of her new life. Every item has its place, and every journey brings a new space to fill.",
+    "features": [
+      "Cozy and relaxing packing puzzles",
+      "Arrange and organize a variety of belongings",
+      "Follow Roslyn's journey through college and beyond",
+      "No time pressure: just pack, arrange, and enjoy"
+    ],
+    "tech": [
+      "iOS",
+      "Swift"
+    ],
+    "demoLink": "https://elios-66.itch.io/fond-folding",
+    "repoLink": "",
+    "links": [
+      {
+        "label": "Play on itch.io",
+        "url": "https://elios-66.itch.io/fond-folding"
+      },
+      {
+        "label": "App Store",
+        "url": "https://apps.apple.com/id/app/fond-folding/id6790388767"
+      }
+    ],
+    "recognition": "Apple Institute for Game Developer Project",
+    "role": "Game designer / Developer",
+    "team": "Elios, kurak57, SkyKelvin & team",
+    "tag": "Pack your way forward.",
+    "tone": 4,
+    "sticker": "APP STORE",
+    "heroImages": [],
+    "portrait": true
+  },
+  {
+    "id": "pager",
+    "title": "Love Pager Panic",
+    "category": "game",
+    "categoryDisplay": "Morse horror / Narrative",
+    "thumbImage": "https://img.itch.zone/aW1nLzI4Nzc5OTM2LnBuZw==/original/a%2FoHfQ.png",
+    "images": [
+      "https://img.itch.zone/aW1nLzI4Nzc5OTM2LnBuZw==/original/a%2FoHfQ.png",
+      "https://img.itch.zone/aW1hZ2UvNDgyNjEwOS8yODc4MjQ5MC5wbmc=/original/baRUwv.png",
+      "https://img.itch.zone/aW1hZ2UvNDgyNjEwOS8yODc4MjM5Ny5wbmc=/original/8EN7Rr.png",
+      "https://img.itch.zone/aW1hZ2UvNDgyNjEwOS8yODc4MjM5Mi5wbmc=/original/8H4%2FSH.png",
+      "https://img.itch.zone/aW1hZ2UvNDgyNjEwOS8yODc4MjM5Ni5wbmc=/original/JHlgQT.png"
+    ],
+    "desc": "It's 1988. Every night, you and your girlfriend exchange messages through a pager using secret Morse code. But tonight, your replies are slower and her affection turns into an obsessive nightmare. Decode each incoming Morse message and respond before the countdown runs out—every delay brings her closer to your door.",
+    "features": [
+      "Decode incoming Morse code under intense countdown pressure",
+      "Narrative psychological suspense with branching tension",
+      "Dynamic progression where slow replies bring her to your door",
+      "Authentic 1988 retro pager aesthetic"
+    ],
+    "tech": [
+      "Unity",
+      "C#"
+    ],
+    "demoLink": "https://pollyzain.itch.io/love-pager-panic",
+    "repoLink": "",
+    "links": [
+      {
+        "label": "Play on itch.io",
+        "url": "https://pollyzain.itch.io/love-pager-panic"
+      }
+    ],
+    "recognition": "GMTK Game Jam 2026 submission",
+    "role": "Game designer",
+    "team": "Tomi, Wahyu, Kelvin, Zii, Alisya, Rahmat",
+    "tag": "Decode the Morse before she knocks.",
+    "tone": 2,
+    "sticker": "GMTK 2026",
+    "heroImages": [],
+    "portrait": true
+  },
+  {
+    "id": "mage",
+    "title": "Mage Hourglass",
+    "category": "game",
+    "categoryDisplay": "Action / Bullet Hell",
+    "thumbImage": "https://img.itch.zone/aW1nLzI4NzkwODM2LnBuZw==/original/HeqTTG.png",
+    "images": [
+      "https://img.itch.zone/aW1nLzI4NzkwODM2LnBuZw==/original/HeqTTG.png",
+      "https://img.itch.zone/aW1hZ2UvNDgyNDU4OS8yODgxOTQ3NC5qcGc=/original/cNfHHq.jpg",
+      "https://img.itch.zone/aW1hZ2UvNDgyNDU4OS8yODgxOTQ5OC5qcGc=/original/XRZ61A.jpg",
+      "https://img.itch.zone/aW1hZ2UvNDgyNDU4OS8yODgxOTU1MC5qcGc=/original/EkDgnq.jpg",
+      "https://img.itch.zone/aW1hZ2UvNDgyNDU4OS8yODgxOTU4NS5qcGc=/original/aUKitU.jpg",
+      "https://img.itch.zone/aW1hZ2UvNDgyNDU4OS8yODgxOTYwMy5qcGc=/original/hVGkII.jpg"
+    ],
+    "desc": "A 2D bullet hell action prototype submitted to GMTK Game Jam 2026 under the theme 'Count Down'. Control a time-bending mage, dodge intense projectile barrages, and manipulate temporal mechanics against formidable bosses—because the future you sought was never meant to be seen.",
+    "features": [
+      "Fast-paced 2D bullet hell action and boss battle",
+      "Time manipulation and countdown survival mechanics",
+      "Complex projectile dodging patterns",
+      "Playable directly in the browser"
+    ],
+    "tech": [
+      "Unity",
+      "C#"
+    ],
+    "demoLink": "https://angelina-rianti.itch.io/magehourglass",
+    "repoLink": "",
+    "links": [
+      {
+        "label": "Play on itch.io",
+        "url": "https://angelina-rianti.itch.io/magehourglass"
+      }
+    ],
+    "recognition": "GMTK Game Jam 2026 submission",
+    "role": "Game designer / Developer",
+    "team": "Angelina Rianti, kurak57 & team",
+    "tag": "The future was never meant to be seen.",
+    "tone": 1,
+    "sticker": "GMTK 2026",
+    "heroImages": [],
+    "portrait": true
+  },
+  {
+    "id": "kaiju",
+    "title": "Kaiju Key-Tastrophe",
+    "category": "game",
+    "categoryDisplay": "Keyboard typing roguelike",
+    "thumbImage": "https://img.itch.zone/aW1nLzI4NjA1OTQ0LnBuZw==/original/8aPhto.png",
+    "images": [
+      "https://img.itch.zone/aW1nLzI4NjA1OTQ0LnBuZw==/original/8aPhto.png",
+      "https://img.itch.zone/aW1hZ2UvNDc5NTI4NC8yODYwNTkwMC5wbmc=/original/A09y9W.png",
+      "https://img.itch.zone/aW1hZ2UvNDc5NTI4NC8yODYwNTkwMS5wbmc=/original/xg4jgN.png",
+      "https://img.itch.zone/aW1hZ2UvNDc5NTI4NC8yODYwNTkwMi5wbmc=/original/ytzEzq.png"
+    ],
+    "desc": "You are not the hero—you are a destructive Kaiju whose goal is turning cities into rubble. Type letters on your keyboard to navigate the metropolitan grid, smash target structures, evade electrical traps, and choose mutation cards to evolve into an unstoppable beast before your lifespan runs out.",
+    "features": [
+      "Type keyboard keys (A-Z) to leap across grid coordinates",
+      "Smash fortified target buildings with melee smash attacks",
+      "Draft mutation upgrades after each city to boost Damage, Stamina, or HP",
+      "Procedural city layouts and permadeath stakes"
+    ],
+    "tech": [
+      "Unity",
+      "C#"
+    ],
+    "demoLink": "https://night-deer-studio.itch.io/kaijukey-tastrophe",
+    "repoLink": "",
+    "links": [
+      {
+        "label": "Play on itch.io",
+        "url": "https://night-deer-studio.itch.io/kaijukey-tastrophe"
+      }
+    ],
+    "recognition": "Live2Dev GameJam 2026 submission",
+    "role": "Game Designer & ",
+    "team": "Joy Pintar",
+    "tag": "Hancurkan. Bermutasi.",
+    "tone": 3,
+    "sticker": "Live2Dev",
+    "heroImages": [],
+    "portrait": true
+  },
+  {
+    "id": "vending",
+    "title": "Vending Vending Co",
+    "category": "game",
+    "categoryDisplay": "Simulation, iOS",
+    "thumbImage": "Images/web/VendingCo_Gameplay_1.jpg",
+    "images": [
+      "Images/web/VendingCo_Gameplay_1.jpg",
+      "Images/web/VendingCo_Gameplay_2.jpg",
+      "Images/web/VendingCo_Gameplay_3.jpg",
+      "Images/web/VendingCo_Gameplay_4.jpg",
+      "Images/web/VendingCo_Gameplay_5.jpg"
+    ],
+    "desc": "Play as the most cunning vending machine in the world. A simulation game you can try in the browser on itch.io or on iOS.",
+    "features": [
+      "Simulation game",
+      "Playable in the browser",
+      "Available on the App Store"
+    ],
+    "tech": [],
+    "demoLink": "https://apps.apple.com/id/app/vending-vending-co/id6775981376?l=id",
+    "repoLink": "",
+    "links": [
+      {
+        "label": "App Store",
+        "url": "https://apps.apple.com/id/app/vending-vending-co/id6775981376?l=id"
+      },
+      {
+        "label": "Play on itch.io",
+        "url": "https://kurak57.itch.io/vending-vending-co"
+      }
+    ],
+    "recognition": "Apple Institute for Game Developer Project",
+    "role": "Developer",
+    "team": "Wibu Gacor",
+    "tag": "The most cunning vending machine.",
+    "tone": 4,
+    "sticker": "APP STORE",
+    "heroImages": [],
+    "portrait": true
+  },
+  {
+    "id": "ramboo",
+    "title": "Ramboo Cat",
+    "category": "game",
+    "categoryDisplay": "Idle mobile game",
+    "thumbImage": "Images/web/Ramboo_Cat_Thumbnail.jpg",
+    "images": [
+      "Images/web/Ramboo_Cat_Thumbnail.jpg",
+      "Images/web/RambooCat_1.jpg",
+      "Images/web/RambooCat_2.jpg",
+      "Images/web/RambooCat_3.jpg",
+      "Images/web/RambooCat_4.jpg",
+      "Images/web/RambooCat_5.jpg",
+      "Images/web/RambooCat_6.jpg"
+    ],
+    "desc": "Apoy is the fattest, laziest cat in the world, and his house is full of pests. Ride a robot vacuum that keeps spinning, tap to change its direction, and upgrade it with weapons until the pests are gone.",
+    "features": [
+      "Tap to steer a spinning robot vacuum",
+      "Turn The House Into a Warzone",
+      "Stack Ridiculous Upgrade",
+      "Becoem Meowr Pawerful & Clean Bosses"
+    ],
+    "tech": [],
+    "demoLink": "",
+    "repoLink": "",
+    "links": [
+      {
+        "label": "Play on TestFlight",
+        "url": "https://testflight.apple.com/join/yZ2uFxJq"
+      }
+    ],
+    "recognition": "Apple Institute for Game Developer Project",
+    "role": "Game designer",
+    "team": "Summerland Games",
+    "tag": "Become pawerful.",
+    "tone": 2,
+    "sticker": "TestFlight",
+    "heroImages": [],
+    "portrait": true
+  },
+  {
+    "id": "kopling",
+    "title": "Kopling: Stories in a Cup",
+    "category": "game",
+    "categoryDisplay": "Narrative simulation",
+    "thumbImage": "Images/web/Projects-Kopling-Cover.jpg",
+    "images": [
+      "Images/web/Projects-Kopling-gameplay1.jpg",
+      "Images/web/Projects-Kopling-menu.jpg",
+      "Images/web/Projects-Kopling-gameplay2.jpg",
+      "Images/web/Projects-Kopling-gameplay3.jpg",
+      "Images/web/Projects-Kopling-gameplay4.jpg"
+    ],
+    "desc": "Kopling is a narrative-based simulation game in which players take on the role of a street-side coffee seller. After completing an order, players are presented with dialogue choices, where each decision and specific event can influence the storyline and determine the game's ending.",
+    "features": [
+      "Serve drinks based on customer requests",
+      "Dialogue system and branching storyline",
+      "Multiple game endings"
+    ],
+    "tech": [
+      "Unity",
+      "C#"
+    ],
+    "demoLink": "https://empat-mata-studio.itch.io/kopling-stories-in-a-cup",
+    "repoLink": "",
+    "links": [
+      {
+        "label": "Play on itch.io",
+        "url": "https://empat-mata-studio.itch.io/kopling-stories-in-a-cup"
+      }
+    ],
+    "recognition": "Apple Developer Academy Project",
+    "role": "Developer",
+    "team": "Empat Mata Studio",
+    "tag": "",
+    "tone": 1,
+    "sticker": "Apple Academy",
+    "heroImages": [],
+    "portrait": true
+  },
+  {
+    "id": "airlove",
+    "title": "AirLove",
+    "category": "game",
+    "categoryDisplay": "Cooperative adventure",
+    "thumbImage": "Images/web/Projects-AirLove-Cover.jpg",
+    "images": [
+      "Images/web/Projects-AirLove-Cover.jpg",
+      "Images/web/Projects-AirLove-menu.jpg",
+      "Images/web/Projects-AirLove-gameplay1.jpg",
+      "Images/web/Projects-AirLove-gameplay2.jpg",
+      "Images/web/Projects-AirLove-gameplay3.jpg",
+      "Images/web/Projects-AirLove-gameplay4.jpg"
+    ],
+    "desc": "A cooperative adventure game inspired by Lovers in a Dangerous Spacetime. Players take on the role of a pair of lovers who fly their house into the sky to reclaim lost words of love, operating various mechanisms such as altitude control, letter-catching tools, and weapons.",
+    "features": [
+      "Cooperative multiplayer game",
+      "Multiple ship mechanics and mechanisms",
+      "Dynamic obstacle and enemy handling"
+    ],
+    "tech": [
+      "Unity",
+      "C#"
+    ],
+    "demoLink": "https://kurak57.itch.io/airlove",
+    "repoLink": "",
+    "links": [
+      {
+        "label": "Play on itch.io",
+        "url": "https://kurak57.itch.io/airlove"
+      }
+    ],
+    "recognition": "Apple Developer Academy Project",
+    "role": "Developer",
+    "team": "",
+    "tag": "",
+    "tone": 2,
+    "sticker": "Apple Academy",
+    "heroImages": [],
+    "portrait": true
+  },
+  {
+    "id": "eternal",
+    "title": "Eternal Sea of Indonesia",
+    "category": "game",
+    "categoryDisplay": "Roblox open world",
+    "thumbImage": "Images/web/Projects-Eternal-cover.jpg",
+    "images": [
+      "Images/web/Projects-Eternal-cover.jpg",
+      "Images/web/Projects-Eternal-gameplay1.jpg",
+      "Images/web/Projects-Eternal-gameplay2.jpg",
+      "Images/web/Projects-Eternal-gameplay3.jpg",
+      "Images/web/Projects-Eternal-gameplay4.jpg",
+      "Images/web/Projects-Eternal-gameplay5.jpg"
+    ],
+    "desc": "A game project within Roblox aimed at implementing learning outcomes in the program 'Metaverse 3D World Creation and Commercialization'. This game focuses on educational themes to teach Indonesian history to children in a fun way while playing. It is designed as an open-world type.",
+    "features": [
+      "Open-world exploration",
+      "Educational missions from every existing island",
+      "Leveling system"
+    ],
+    "tech": [
+      "Roblox Studio",
+      "Lua"
+    ],
+    "demoLink": "https://www.roblox.com/games/11384893473/Eternal-Sea-of-Indonesia",
+    "repoLink": "",
+    "links": [
+      {
+        "label": "Play on Roblox",
+        "url": "https://www.roblox.com/games/11384893473/Eternal-Sea-of-Indonesia"
+      }
+    ],
+    "recognition": "Metaverse 3D World program by CIAS & Wir Group",
+    "role": "Developer",
+    "team": "",
+    "tag": "",
+    "tone": 3,
+    "sticker": "",
+    "heroImages": [],
+    "portrait": true
+  },
+  {
+    "id": "pushy",
+    "title": "Pu.shy",
+    "category": "ios",
+    "categoryDisplay": "iOS app",
+    "thumbImage": "Images/web/Projects-Pushy-Cover.jpg",
+    "images": [
+      "Images/web/Projects-Pushy-Cover.jpg",
+      "Images/web/Projects-Pushy-ss1.jpg",
+      "Images/web/Projects-Pushy-ss2.jpg"
+    ],
+    "desc": "Pushy, a beginner-friendly iOS app that uses real-time pose estimation to evaluate weightlifting form and provide instant feedback.",
+    "features": [
+      "Tracks user movements",
+      "Detects incorrect form using a lightweight ML model",
+      "Real-time visual and audio feedback"
+    ],
+    "tech": [
+      "Swift",
+      "SwiftUI",
+      "CoreData",
+      "CoreML"
+    ],
+    "demoLink": "",
+    "repoLink": "https://github.com/kurak57/Pushy",
+    "links": [],
+    "recognition": "Apple Developer Academy Project",
+    "role": "Developer",
+    "team": "",
+    "tag": "",
+    "tone": 4,
+    "sticker": "Apple Academy",
+    "heroImages": [],
+    "portrait": true
+  },
+  {
+    "id": "piraterun",
+    "title": "PirateRun",
+    "category": "game",
+    "categoryDisplay": "3D endless runner",
+    "thumbImage": "https://img.itch.zone/aW1nLzI1MjU2NDgyLnBuZw==/original/iisRgx.png",
+    "images": [
+      "https://img.itch.zone/aW1nLzI1MjU2NDgyLnBuZw==/original/iisRgx.png",
+      "https://img.itch.zone/aW1hZ2UvNDIzODcxMS8yNTI1NjUwMS5wbmc=/original/4ZaeQC.png",
+      "https://img.itch.zone/aW1hZ2UvNDIzODcxMS8yNTI1NjQ5OS5wbmc=/original/oZWu4x.png",
+      "https://img.itch.zone/aW1hZ2UvNDIzODcxMS8yNTI1NjUwMC5wbmc=/original/FXvkRK.png"
+    ],
+    "desc": "PirateRun is a 3D endless runner game where players control a pirate crew running across a bridge. The game features a time-based system, dynamic difficulty, procedural generation, and power-up effects.",
+    "features": [
+      "Procedural platform generation",
+      "Time-based checkpoint system",
+      "Dynamic difficulty scaling",
+      "Dependency Injection architecture"
+    ],
+    "tech": [
+      "Unity",
+      "C#"
+    ],
+    "demoLink": "https://kurak57.itch.io/piraterun",
+    "repoLink": "",
+    "links": [
+      {
+        "label": "Play on itch.io",
+        "url": "https://kurak57.itch.io/piraterun"
+      }
+    ],
+    "recognition": "Self project tolearn procedural generation",
+    "role": "Developer",
+    "team": "",
+    "tag": "Run the bridge, dodge, collect.",
+    "tone": 1,
+    "sticker": "",
+    "heroImages": [],
+    "portrait": true
+  },
+  {
+    "id": "ballcher",
+    "title": "Ballcher",
+    "category": "game",
+    "categoryDisplay": "Reflex arcade",
+    "thumbImage": "https://img.itch.zone/aW1nLzI0Njc5MzIzLnBuZw==/original/YliCSN.png",
+    "images": [
+      "https://img.itch.zone/aW1nLzI0Njc5MzIzLnBuZw==/original/YliCSN.png",
+      "Images/web/balcher_ss_1.png",
+      "Images/web/balcher_ss_2.png",
+      "Images/web/balcher_ss_3.png"
+    ],
+    "desc": "A casual reflex-based game originally created for ScoreJam. Players catch falling balls using a catcher that must match the type of ball. The speed and variety of balls increase over time.",
+    "features": [
+      "Endless survival gameplay",
+      "Escalating speed and variety",
+      "Local leaderboard system using PlayerPrefs"
+    ],
+    "tech": [
+      "Unity",
+      "C#"
+    ],
+    "demoLink": "https://kurak57.itch.io/ballcher",
+    "repoLink": "",
+    "links": [
+      {
+        "label": "Play on itch.io",
+        "url": "https://kurak57.itch.io/ballcher"
+      }
+    ],
+    "recognition": "ScoreJam Game Jam 2025 submission",
+    "role": "Developer",
+    "team": "",
+    "tag": "Catch the right ball.",
+    "tone": 2,
+    "sticker": "ScoreJam",
+    "heroImages": [],
+    "portrait": true
+  },
+  {
+    "id": "chandra",
+    "title": "Chandra Sekhar",
+    "category": "game",
+    "categoryDisplay": "Space evasion",
+    "thumbImage": "Images/web/ChandraSekar_thumbnail.png",
+    "images": [
+      "Images/web/ChandraSekar_thumbnail.png",
+      "Images/web/ChandraSekar_SS_1.png",
+      "Images/web/ChandraSekar_SS_2.png",
+      "Images/web/ChandraSekar_SS_3.png"
+    ],
+    "desc": "Chandra Sekhar is an evasion game developed as a submission for EyeJam within a one-week development period. Players control the character Chandra to navigate outer space and avoid floating obstacles in search of Sekhar.",
+    "features": [
+      "Space evasion mechanics",
+      "Procedural obstacle generation",
+      "Endless survival"
+    ],
+    "tech": [
+      "Unity",
+      "C#"
+    ],
+    "demoLink": "https://empat-mata-studio.itch.io/chandrasekhar",
+    "repoLink": "",
+    "links": [
+      {
+        "label": "Play on itch.io",
+        "url": "https://empat-mata-studio.itch.io/chandrasekhar"
+      }
+    ],
+    "recognition": "EyeJam Game Jam 2025 submission",
+    "role": "Developer",
+    "team": "Empat Mata Studio",
+    "tag": "Find Sekhar in the dark.",
+    "tone": 3,
+    "sticker": "EyeJam",
+    "heroImages": [],
+    "portrait": true
+  },
+  {
+    "id": "amv",
+    "title": "Music Video Animation",
+    "category": "video",
+    "categoryDisplay": "Fan-made video",
+    "thumbImage": "Images/web/Projects-AMV-Cover.jpg",
+    "images": [
+      "Images/web/Projects-AMV-Cover.jpg",
+      "Images/web/Projects-AMV-ss1.jpg",
+      "Images/web/Projects-AMV-ss2.jpg",
+      "Images/web/Projects-AMV-ss3.jpg"
+    ],
+    "desc": "A fan-made animated music video made for a Vtuber on Youtube, using a cover song titled 'Dadada Tenshi' sung by Amatsuka Uto. Drawn from scratch and edited frame-by-frame.",
+    "features": [
+      "2D character art",
+      "Frame-by-frame animation",
+      "Video editing"
+    ],
+    "tech": [
+      "Vegas Pro",
+      "Ibis Paint X",
+      "Photoshop"
+    ],
+    "demoLink": "https://youtu.be/8rVrpu5e1ak?si=FxfbRQt8OcXXkLda",
+    "repoLink": "",
+    "links": [
+      {
+        "label": "Watch on YouTube",
+        "url": "https://youtu.be/8rVrpu5e1ak?si=FxfbRQt8OcXXkLda"
+      }
+    ],
+    "recognition": "Drawn frame by frame",
+    "role": "Animator",
+    "team": "",
+    "tag": "",
+    "tone": 4,
+    "sticker": "",
+    "heroImages": [],
+    "portrait": true
+  },
+  {
+    "id": "3d",
+    "title": "3D Portfolio",
+    "category": "3d",
+    "categoryDisplay": "3D art",
+    "thumbImage": "Images/web/3D_Art_1.jpg",
+    "images": [
+      "Images/web/3D_Art_1.jpg",
+      "Images/web/3D_Art_2.png",
+      "Images/web/3D_Art_3.png",
+      "Images/web/3D_Art_4.png",
+      "Images/web/3D_Art_5.png"
+    ],
+    "desc": "A collection of 3D projects created between 2020-2024, including custom models, animations, and rendered videos demonstrating capability in 3D production and asset creation.",
+    "features": [
+      "Modeling",
+      "Animation",
+      "Video rendering"
+    ],
+    "tech": [
+      "Blender"
+    ],
+    "demoLink": "https://www.instagram.com/kurak_57/",
+    "repoLink": "",
+    "links": [
+      {
+        "label": "See it on Instagram",
+        "url": "https://www.instagram.com/kurak_57/"
+      }
+    ],
+    "recognition": "3D art as a hobby made from 2020",
+    "role": "3D artist",
+    "team": "",
+    "tag": "Models, animation, renders.",
+    "tone": 1,
+    "sticker": "",
+    "heroImages": [],
+    "portrait": true
+  }
+]

@@ -1,0 +1,1633 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tomi Timutius | Game designer and developer</title>
+  <meta name="description"
+    content="Portfolio of Tomi Timutius, game designer and Unity/iOS developer. Masbook, Dream Inc, Warmth &amp; Whistles, Kopling, AirLove and more.">
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Patrick+Hand&display=swap" rel="stylesheet">
+  <script>document.documentElement.classList.add("js")</script>
+  <style>
+    :root {
+      --ink: #1b1626;
+      --paper: #fff7e0;
+      --yellow: #ffd93b;
+      --pink: #ff5c9a;
+      --cyan: #3cc8ff;
+      --lilac: #b9a2ff;
+      --white: #fff;
+      --display: 'Bangers', Impact, 'Arial Narrow Bold', sans-serif;
+      --hand: 'Patrick Hand', 'Chalkboard SE', 'Comic Sans MS', cursive, sans-serif;
+      --blob: 255px 18px 225px 18px / 18px 225px 18px 255px;
+      --blob2: 18px 225px 18px 255px / 255px 18px 225px 18px;
+      --sh: 6px 6px 0 var(--ink);
+      --hud: 60px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0
+    }
+
+    html {
+      overflow-x: clip;
+      scroll-behavior: smooth;
+      scroll-padding-top: var(--hud)
+    }
+
+    body {
+      background: var(--ink);
+      color: var(--ink);
+      font: 400 clamp(1.15rem, 1.05rem + .35vw, 1.35rem)/1.4 var(--hand);
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased
+    }
+
+    img {
+      display: block;
+      max-width: 100%
+    }
+
+    a {
+      color: inherit
+    }
+
+    button {
+      font: inherit;
+      color: inherit;
+      cursor: pointer;
+      border: 0;
+      background: none
+    }
+
+    [hidden] {
+      display: none !important
+    }
+
+    :focus-visible {
+      outline: 4px dashed var(--ink);
+      outline-offset: 4px
+    }
+
+    .small {
+      font-size: 1.05rem
+    }
+
+    h1,
+    h2,
+    h3,
+    .cap,
+    .btn,
+    .tbc,
+    .logo {
+      font-family: var(--display);
+      font-weight: 400;
+      letter-spacing: .03em;
+      text-transform: uppercase
+    }
+
+    /* HUD */
+    .hud {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: var(--hud);
+      z-index: 60;
+      background: var(--paper);
+      border-bottom: 4px solid var(--ink);
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      padding: 0 16px
+    }
+
+    .logo {
+      font-size: 1.9rem;
+      text-decoration: none;
+      background: var(--pink);
+      padding: 2px 12px;
+      border: 3px solid var(--ink);
+      border-radius: var(--blob);
+      box-shadow: 3px 3px 0 var(--ink);
+      transform: rotate(-3deg);
+      line-height: 1.1;
+      transition: transform .15s
+    }
+
+    .logo:hover {
+      transform: rotate(2deg) scale(1.06)
+    }
+
+    .chap {
+      font-family: var(--display);
+      font-size: 1.3rem;
+      letter-spacing: .04em;
+      text-transform: uppercase;
+      flex: 1;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis
+    }
+
+    .dots {
+      display: flex;
+      gap: 8px
+    }
+
+    .dots a {
+      width: 34px;
+      height: 34px;
+      display: grid;
+      place-items: center;
+      border: 3px solid var(--ink);
+      border-radius: 50%;
+      background: var(--white);
+      font: 400 1.1rem var(--display);
+      text-decoration: none;
+      transition: transform .15s, background .15s
+    }
+
+    .dots a:hover {
+      transform: translateY(-3px) rotate(-6deg)
+    }
+
+    .dots a.on {
+      background: var(--yellow);
+      transform: scale(1.15)
+    }
+
+    .prog {
+      position: absolute;
+      left: 0;
+      bottom: -8px;
+      height: 8px;
+      width: 100%;
+      pointer-events: none
+    }
+
+    .prog i {
+      display: block;
+      height: 100%;
+      width: 0;
+      background: var(--pink);
+      border: 3px solid var(--ink);
+      border-left: 0;
+      border-radius: 0 8px 8px 0
+    }
+
+    /* sections */
+    .ch {
+      overflow-x: clip;
+      position: relative;
+      padding: calc(var(--hud) + clamp(56px, 7vw, 100px)) 20px clamp(72px, 8vw, 120px);
+      isolation: isolate
+    }
+
+    #home {
+      padding-top: calc(var(--hud) + clamp(40px, 5vw, 80px));
+      min-height: 100svh
+    }
+
+    .ch+.ch,
+    .ticker+.ch {
+      margin-top: 0
+    }
+
+    .ch::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: -22px;
+      height: 24px;
+      background: inherit;
+      -webkit-mask: conic-gradient(from -45deg at bottom, #0000, #000 1deg 89deg, #0000 90deg) 50%/34px 100%;
+      mask: conic-gradient(from -45deg at bottom, #0000, #000 1deg 89deg, #0000 90deg) 50%/34px 100%;
+      z-index: -1
+    }
+
+    #home::before {
+      display: none
+    }
+
+    .yl {
+      background: var(--yellow)
+    }
+
+    .pp {
+      background: var(--paper)
+    }
+
+    .cy {
+      background: var(--cyan)
+    }
+
+    .pk {
+      background: var(--pink)
+    }
+
+    .lp {
+      background: var(--lilac)
+    }
+
+    .ht::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      background-image: radial-gradient(rgba(27, 22, 38, .2) 2px, transparent 2.6px);
+      background-size: 18px 18px;
+      -webkit-mask-image: linear-gradient(135deg, #000 0, transparent 48%);
+      mask-image: linear-gradient(135deg, #000 0, transparent 48%)
+    }
+
+    .wrap {
+      max-width: 1180px;
+      margin: 0 auto;
+      position: relative
+    }
+
+    .cap {
+      display: block;
+      width: max-content;
+      background: var(--white);
+      border: 3px solid var(--ink);
+      padding: 2px 14px;
+      font-size: 1.35rem;
+      transform: rotate(-2deg);
+      box-shadow: 4px 4px 0 var(--ink);
+      margin-bottom: 18px;
+      border-radius: 6px
+    }
+
+    h2 {
+      font-size: clamp(2.8rem, 2rem + 4.4vw, 5.6rem);
+      line-height: .95;
+      position: relative;
+      display: block;
+      width: fit-content;
+      max-width: 16ch;
+      margin-bottom: 22px;
+      text-shadow: 3px 3px 0 rgba(255, 255, 255, .65)
+    }
+
+    .sq {
+      position: absolute;
+      left: 0;
+      bottom: -14px;
+      width: 100%;
+      height: 14px;
+      color: var(--ink);
+      overflow: visible
+    }
+
+    .lead {
+      max-width: 48ch;
+      font-size: clamp(1.3rem, 1.2rem + .5vw, 1.6rem);
+      margin-bottom: 34px
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      min-height: 52px;
+      padding: 6px 26px;
+      background: var(--pink);
+      color: var(--ink);
+      font-size: 1.5rem;
+      text-decoration: none;
+      border: 4px solid var(--ink);
+      border-radius: var(--blob);
+      box-shadow: var(--sh);
+      transition: transform .12s, box-shadow .12s;
+      word-break: break-all
+    }
+
+    .btn:hover {
+      transform: translate(-3px, -3px) rotate(-1.5deg);
+      box-shadow: 9px 9px 0 var(--ink)
+    }
+
+    .btn:active {
+      transform: translate(4px, 4px);
+      box-shadow: 2px 2px 0 var(--ink)
+    }
+
+    .btn.alt {
+      background: var(--white)
+    }
+
+    .btn.mini {
+      min-height: 42px;
+      font-size: 1.15rem;
+      padding: 2px 18px;
+      box-shadow: 4px 4px 0 var(--ink)
+    }
+
+    .cta,
+    .soc {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+      margin-bottom: 22px
+    }
+
+    /* hero */
+    .hero {
+      display: grid;
+      grid-template-columns: 1.1fr .9fr;
+      gap: clamp(24px, 5vw, 70px);
+      align-items: center
+    }
+
+    h1 {
+      font-size: clamp(3.2rem, 2rem + 5.4vw, 6.8rem);
+      line-height: .92;
+      margin-bottom: 26px;
+      position: relative;
+      text-shadow: 4px 4px 0 rgba(255, 255, 255, .7)
+    }
+
+    h1 em {
+      font-style: normal;
+      color: var(--pink);
+      -webkit-text-stroke: 3px var(--ink);
+      text-shadow: 4px 4px 0 var(--ink);
+      paint-order: stroke fill
+    }
+
+    h1 .sq {
+      bottom: -18px
+    }
+
+    .lede {
+      max-width: 34ch;
+      font-size: clamp(1.35rem, 1.2rem + .6vw, 1.7rem);
+      margin-bottom: 30px
+    }
+
+    .collage {
+      position: relative;
+      aspect-ratio: 1/1;
+      max-width: 560px;
+      width: 100%;
+      margin: 0 auto
+    }
+
+    .shot {
+      position: absolute;
+      background: var(--white);
+      padding: 8px 8px 8px;
+      border: 4px solid var(--ink);
+      box-shadow: var(--sh);
+      transform: rotate(var(--r));
+      transition: transform .3s cubic-bezier(.2, 1.35, .35, 1), box-shadow .25s, filter .25s, opacity .25s, z-index 0s .25s;
+      cursor: pointer;
+      will-change: transform;
+    }
+
+    .shot .ph {
+      position: absolute;
+      inset: 8px;
+      overflow: hidden;
+      background: var(--yellow)
+    }
+
+    .shot img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover
+    }
+
+    .shot {
+      width: 38%;
+      aspect-ratio: 9/16.6
+    }
+
+    .shot.s0 {
+      left: 0;
+      top: 14%;
+      z-index: 1
+    }
+
+    .shot.s1 {
+      left: 20.5%;
+      top: 4%;
+      z-index: 2
+    }
+
+    .shot.s2 {
+      left: 41%;
+      top: 15%;
+      z-index: 3
+    }
+
+    .shot.s3 {
+      right: 0;
+      top: 5%;
+      z-index: 4
+    }
+
+    /* Fan out hand when entering collage */
+    .collage:hover .shot.s0 {
+      transform: rotate(-14deg) translate(-18px, 6px)
+    }
+
+    .collage:hover .shot.s1 {
+      transform: rotate(-5deg) translate(-6px, -10px)
+    }
+
+    .collage:hover .shot.s2 {
+      transform: rotate(5deg) translate(6px, -6px)
+    }
+
+    .collage:hover .shot.s3 {
+      transform: rotate(14deg) translate(18px, 6px)
+    }
+
+    /* Card game selection: hovered card pops to the very front, lifts up, straightens, and scales */
+    .shot:hover,
+    .shot:focus-visible {
+      z-index: 20 !important;
+      box-shadow: 12px 14px 0 var(--ink);
+      transition: transform .3s cubic-bezier(.2, 1.35, .35, 1), box-shadow .25s, filter .25s, opacity .25s, z-index 0s 0s;
+    }
+
+    .collage .shot.s0:hover,
+    .collage .shot.s0:focus-visible {
+      transform: translate(-20px, -32px) rotate(-2deg) scale(1.14) !important
+    }
+
+    .collage .shot.s1:hover,
+    .collage .shot.s1:focus-visible {
+      transform: translate(-6px, -42px) rotate(0deg) scale(1.14) !important
+    }
+
+    .collage .shot.s2:hover,
+    .collage .shot.s2:focus-visible {
+      transform: translate(6px, -42px) rotate(0deg) scale(1.14) !important
+    }
+
+    .collage .shot.s3:hover,
+    .collage .shot.s3:focus-visible {
+      transform: translate(20px, -32px) rotate(2deg) scale(1.14) !important
+    }
+
+    /* Dim unselected cards slightly when one card is picked */
+    .collage:has(.shot:hover) .shot:not(:hover) {
+      opacity: .82;
+      filter: brightness(.93) saturate(.9);
+    }
+
+    .burst,
+    .burst-t,
+    .bubble,
+    .star {
+      pointer-events: none
+    }
+
+    .burst {
+      position: absolute;
+      right: -4%;
+      top: -9%;
+      width: 30%;
+      z-index: 4;
+      filter: drop-shadow(5px 5px 0 var(--ink));
+      animation: spin 18s linear infinite
+    }
+
+    .burst-t {
+      position: absolute;
+      right: -4%;
+      top: -9%;
+      width: 30%;
+      aspect-ratio: 1;
+      z-index: 5;
+      display: grid;
+      place-content: center;
+      text-align: center;
+      line-height: 1;
+      transform: rotate(8deg)
+    }
+
+    .burst-t b {
+      font: 400 clamp(1.6rem, 3vw, 2.6rem) var(--display);
+      letter-spacing: .03em
+    }
+
+    .burst-t span {
+      font-size: clamp(.85rem, 1.2vw, 1.1rem)
+    }
+
+    .bubble {
+      position: absolute;
+      left: 0;
+      top: -10%;
+      z-index: 6;
+      background: var(--white);
+      border: 4px solid var(--ink);
+      border-radius: 50%/60%;
+      padding: 12px 22px;
+      max-width: 55%;
+      text-align: center;
+      font-size: 1.15rem;
+      line-height: 1.15;
+      transform: rotate(-4deg);
+      box-shadow: 4px 4px 0 var(--ink)
+    }
+
+    .bubble::after {
+      content: "";
+      position: absolute;
+      left: 30%;
+      bottom: -24px;
+      width: 26px;
+      height: 26px;
+      background: var(--white);
+      border: 4px solid var(--ink);
+      border-top: 0;
+      border-left: 0;
+      transform: skewX(-30deg) rotate(20deg)
+    }
+
+    .star {
+      position: absolute;
+      width: 46px;
+      height: 46px;
+      color: var(--yellow);
+      animation: tw 2.4s ease-in-out infinite;
+      z-index: 6;
+      right: 8%;
+      bottom: 6%
+    }
+
+    .star.b {
+      color: var(--cyan);
+      width: 30px;
+      height: 30px;
+      left: -3%;
+      bottom: 34%;
+      right: auto;
+      animation-delay: .9s
+    }
+
+    @keyframes spin {
+      to {
+        transform: rotate(360deg)
+      }
+    }
+
+    @keyframes tw {
+
+      0%,
+      100% {
+        transform: scale(1) rotate(0)
+      }
+
+      50% {
+        transform: scale(1.25) rotate(18deg)
+      }
+    }
+
+    .next {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      width: max-content;
+      margin: 56px auto 0;
+      text-decoration: none;
+      font: 400 1.5rem var(--display);
+      text-transform: uppercase;
+      letter-spacing: .04em;
+      background: var(--white);
+      border: 4px solid var(--ink);
+      border-radius: var(--blob2);
+      padding: 4px 22px 4px 26px;
+      box-shadow: var(--sh);
+      transition: transform .12s
+    }
+
+    .next svg {
+      width: 56px;
+      height: 38px;
+      transform: rotate(95deg);
+      animation: bob 1.4s ease-in-out infinite
+    }
+
+    .next:hover {
+      transform: translateY(-4px) rotate(-1.5deg)
+    }
+
+    @keyframes bob {
+      50% {
+        transform: rotate(95deg) translateX(7px)
+      }
+    }
+
+    #home .next {
+      position: relative;
+      margin-top: 40px
+    }
+
+    .ticker {
+      background: var(--ink);
+      color: var(--yellow);
+      overflow: hidden;
+      white-space: nowrap;
+      border-block: 4px solid var(--ink);
+      padding: 10px 0;
+      position: relative;
+      z-index: 2
+    }
+
+    .ticker div {
+      display: inline-block;
+      animation: marq 30s linear infinite;
+      font: 400 2rem var(--display);
+      text-transform: uppercase;
+      letter-spacing: .05em
+    }
+
+    .ticker span {
+      margin: 0 22px
+    }
+
+    .ticker span:nth-child(even) {
+      color: var(--pink)
+    }
+
+    @keyframes marq {
+      to {
+        transform: translateX(-50%)
+      }
+    }
+
+    /* panels */
+    .panels,
+    .strip {
+      display: grid;
+      gap: 28px;
+      list-style: none;
+      margin-top: 10px
+    }
+
+    .panels.three {
+      grid-template-columns: repeat(3, 1fr)
+    }
+
+    .strip {
+      grid-template-columns: repeat(4, 1fr)
+    }
+
+    .panel {
+      background: var(--white);
+      border: 4px solid var(--ink);
+      border-radius: var(--blob);
+      box-shadow: var(--sh);
+      padding: 24px 24px 26px;
+      transform: rotate(var(--rot, 0deg));
+      transition: transform .2s, box-shadow .2s
+    }
+
+    .panel:hover {
+      transform: rotate(0) translateY(-6px);
+      box-shadow: 10px 12px 0 var(--ink)
+    }
+
+    .panel .ic {
+      width: 84px;
+      height: 84px;
+      margin-bottom: 10px
+    }
+
+    .panel h3 {
+      font-size: 2.1rem;
+      line-height: 1;
+      margin-bottom: 8px
+    }
+
+    .panel p {
+      font-size: 1.2rem
+    }
+
+    .strip .panel:not(:last-child)::after {
+      content: "";
+      position: absolute
+    }
+
+    .strip {
+      counter-reset: s
+    }
+
+    .strip .panel {
+      position: relative
+    }
+
+    .strip .panel::before {
+      counter-increment: s;
+      content: counter(s);
+      position: absolute;
+      right: -12px;
+      top: -18px;
+      width: 46px;
+      height: 46px;
+      display: grid;
+      place-items: center;
+      background: var(--yellow);
+      border: 4px solid var(--ink);
+      border-radius: 50%;
+      font: 400 1.7rem var(--display);
+      transform: rotate(8deg)
+    }
+
+    /* games */
+    .filters {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 34px
+    }
+
+    .filters button {
+      min-height: 46px;
+      padding: 2px 22px;
+      background: var(--white);
+      border: 4px solid var(--ink);
+      border-radius: var(--blob);
+      font: 400 1.35rem var(--display);
+      letter-spacing: .04em;
+      text-transform: uppercase;
+      box-shadow: 4px 4px 0 var(--ink);
+      transition: transform .12s
+    }
+
+    .filters button:hover {
+      transform: translateY(-3px) rotate(-2deg)
+    }
+
+    .filters button[aria-pressed=true] {
+      background: var(--yellow);
+      transform: translate(3px, 3px);
+      box-shadow: 1px 1px 0 var(--ink)
+    }
+
+    .pgrid {
+      list-style: none;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 34px 26px
+    }
+
+    .tile-p {
+      position: relative;
+      transform: rotate(var(--rot));
+      transition: transform .2s
+    }
+
+    .tile-p button {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      width: 100%;
+      text-align: left;
+      background: var(--white);
+      border: 4px solid var(--ink);
+      border-radius: var(--blob2);
+      box-shadow: var(--sh);
+      padding: 10px 10px 14px;
+      transition: transform .15s, box-shadow .15s;
+      overflow: visible
+    }
+
+    .tile-p:hover {
+      transform: rotate(0)
+    }
+
+    .tile-p button:hover {
+      transform: translate(-3px, -5px);
+      box-shadow: 10px 11px 0 var(--ink)
+    }
+
+    .tile-p .th {
+      display: block;
+      position: relative;
+      width: 100%;
+      aspect-ratio: 3/2;
+      overflow: hidden;
+      border: 3px solid var(--ink);
+      margin-bottom: 10px;
+      background: var(--yellow)
+    }
+
+    .tile-p .th img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform .4s
+    }
+
+    .tile-p button:hover .th img {
+      transform: scale(1.08) rotate(1deg)
+    }
+
+    .tile-p .tt {
+      font: 400 1.7rem/1 var(--display);
+      letter-spacing: .03em;
+      text-transform: uppercase;
+      padding: 0 6px
+    }
+
+    .tile-p .tm {
+      font-size: 1.1rem;
+      padding: 0 6px;
+      opacity: .85
+    }
+
+    .sticker {
+      position: absolute;
+      right: -12px;
+      top: -14px;
+      z-index: 3;
+      background: var(--yellow);
+      border: 3px solid var(--ink);
+      border-radius: 50% 45% 55% 40%;
+      padding: 6px 12px;
+      font: 400 1.15rem/1 var(--display);
+      letter-spacing: .04em;
+      transform: rotate(9deg);
+      box-shadow: 3px 3px 0 var(--ink)
+    }
+
+    .card {
+      position: absolute;
+      inset: 0;
+      padding: 12px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      background-image: radial-gradient(rgba(27, 22, 38, .18) 2px, transparent 2.6px);
+      background-size: 14px 14px
+    }
+
+    .card b {
+      font: 400 clamp(1.5rem, 2vw, 2rem)/.95 var(--display);
+      text-transform: uppercase;
+      letter-spacing: .03em
+    }
+
+    .card span {
+      font-size: 1.1rem;
+      line-height: 1.1;
+      max-width: 20ch
+    }
+
+    .card .q {
+      font-size: 1.25rem;
+      line-height: 1.15
+    }
+
+    .th .card {
+      justify-content: center;
+      align-items: center;
+      text-align: center
+    }
+
+    .th .card b {
+      display: none
+    }
+
+    .th .card span {
+      font: 400 clamp(1.4rem, 2vw, 1.9rem)/1.05 var(--display);
+      text-transform: uppercase;
+      max-width: none
+    }
+
+    .cy {
+      --c: var(--cyan)
+    }
+
+    .card.cy {
+      background-color: var(--cyan)
+    }
+
+    .card.pk {
+      background-color: var(--pink)
+    }
+
+    .card.yl {
+      background-color: var(--yellow)
+    }
+
+    .card.li {
+      background-color: var(--lilac)
+    }
+
+    /* wins */
+    .badges {
+      list-style: none;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+      margin: 10px 0 56px
+    }
+
+    .badges li {
+      position: relative;
+      aspect-ratio: 1;
+      display: grid;
+      place-items: center;
+      text-align: center;
+      transform: rotate(var(--rot));
+      transition: transform .25s
+    }
+
+    .badges li:hover {
+      transform: rotate(0) scale(1.05)
+    }
+
+    .badges svg {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      filter: drop-shadow(6px 6px 0 var(--ink))
+    }
+
+    .badges div {
+      position: relative;
+      width: 66%;
+      display: grid;
+      gap: 6px
+    }
+
+    .badges b {
+      font: 400 clamp(2.2rem, 3.4vw, 3.4rem)/.9 var(--display);
+      text-transform: uppercase
+    }
+
+    .badges span {
+      font-size: 1.1rem;
+      line-height: 1.15
+    }
+
+    .nums {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px
+    }
+
+    .nums>div {
+      background: var(--white);
+      border: 4px solid var(--ink);
+      border-radius: var(--blob);
+      box-shadow: var(--sh);
+      padding: 18px 22px;
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 16px;
+      align-items: center
+    }
+
+    .nums dt {
+      font: 400 4.4rem/1 var(--display);
+      color: var(--pink);
+      -webkit-text-stroke: 2px var(--ink);
+      paint-order: stroke fill
+    }
+
+    .nums dd {
+      font-size: 1.2rem;
+      line-height: 1.2
+    }
+
+    /* contact */
+    .ct {
+      display: grid;
+      grid-template-columns: 1.3fr .7fr;
+      gap: clamp(24px, 5vw, 70px);
+      align-items: center
+    }
+
+    .me {
+      position: relative;
+      background: var(--white);
+      border: 4px solid var(--ink);
+      box-shadow: var(--sh);
+      padding: 12px 12px 8px;
+      transform: rotate(var(--rot));
+      max-width: 340px;
+      margin: 0 auto
+    }
+
+    .me img {
+      width: 100%;
+      aspect-ratio: 1;
+      object-fit: cover;
+      object-position: 50% 20%;
+      border: 3px solid var(--ink)
+    }
+
+    .me figcaption {
+      font: 400 1.8rem/1.2 var(--display);
+      text-align: center;
+      text-transform: uppercase;
+      letter-spacing: .04em;
+      padding-top: 6px
+    }
+
+    .me .star {
+      right: -18px;
+      top: -22px;
+      bottom: auto
+    }
+
+    footer {
+      background: var(--ink);
+      color: var(--paper);
+      text-align: center;
+      padding: 56px 20px 44px
+    }
+
+    .tbc {
+      font-size: clamp(2.6rem, 2rem + 4vw, 5.4rem);
+      color: var(--yellow);
+      line-height: 1;
+      margin-bottom: 16px;
+      text-shadow: 4px 4px 0 var(--pink)
+    }
+
+    /* dialog */
+    .err {
+      grid-column: 1/-1;
+      background: var(--white);
+      border: 4px solid var(--ink);
+      padding: 18px;
+      border-radius: var(--blob);
+      box-shadow: var(--sh)
+    }
+
+    dialog {
+      margin: auto;
+      width: min(880px, 94vw);
+      max-height: 90vh;
+      overflow: auto;
+      background: var(--paper);
+      color: var(--ink);
+      border: 5px solid var(--ink);
+      border-radius: var(--blob);
+      box-shadow: 10px 10px 0 var(--pink);
+      padding: 0
+    }
+
+    dialog::backdrop {
+      background: rgba(27, 22, 38, .75)
+    }
+
+    .dl {
+      padding: 30px 30px 34px;
+      position: relative
+    }
+
+    .dl h2 {
+      font-size: clamp(2.4rem, 2rem + 2vw, 3.8rem);
+      margin-bottom: 6px;
+      max-width: calc(100% - 110px);
+      text-shadow: none
+    }
+
+    .dl .cat {
+      opacity: .8;
+      margin-bottom: 16px
+    }
+
+    .dl ul {
+      margin: 12px 0 18px 1.3em
+    }
+
+    .dl .x {
+      position: absolute;
+      right: 20px;
+      top: 20px;
+      min-height: 46px;
+      padding: 2px 18px;
+      background: var(--pink);
+      border: 4px solid var(--ink);
+      border-radius: var(--blob);
+      font: 400 1.3rem var(--display);
+      text-transform: uppercase;
+      box-shadow: 3px 3px 0 var(--ink)
+    }
+
+    .dl .meta {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-top: 18px
+    }
+
+    .gal {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 12px;
+      margin: 14px 0 20px
+    }
+
+    .gal {
+      align-items: start
+    }
+
+    .gal.tall {
+      display: flex;
+      gap: 12px;
+      overflow-x: auto;
+      padding-bottom: 10px;
+      scroll-snap-type: x proximity
+    }
+
+    .gal.tall>div {
+      flex: 0 0 auto;
+      scroll-snap-align: start
+    }
+
+    .gal.tall img {
+      height: 340px;
+      width: auto;
+      max-width: none
+    }
+
+    .gal>div {
+      position: relative;
+      overflow: hidden;
+      border: 3px solid var(--ink);
+      background: var(--yellow)
+    }
+
+    .gal>div:has(.card) {
+      aspect-ratio: 3/2
+    }
+
+    .gal img {
+      display: block;
+      width: 100%;
+      height: auto
+    }
+
+    .gal .card b {
+      font-size: 1.4rem
+    }
+
+    /* motion */
+    .js .pop {
+      opacity: .35;
+      transform: translateY(26px) scale(.94) rotate(var(--rot, 0deg));
+      transition: opacity .5s var(--d, 0s), transform .6s cubic-bezier(.3, 1.6, .5, 1) var(--d, 0s)
+    }
+
+    .js .pop.in {
+      opacity: 1;
+      transform: rotate(var(--rot, 0deg))
+    }
+
+    .js .tile-p.pop.in:hover {
+      transform: rotate(0)
+    }
+
+    @media (max-width:900px) {
+      :root {
+        --hud: 54px
+      }
+
+      .dots {
+        display: none
+      }
+
+      .hero,
+      .ct {
+        grid-template-columns: 1fr
+      }
+
+      .collage {
+        max-width: 460px;
+        margin-top: 30px
+      }
+
+      .panels.three,
+      .strip,
+      .badges,
+      .nums {
+        grid-template-columns: 1fr
+      }
+
+      .badges li {
+        max-width: 340px;
+        margin: 0 auto;
+        width: 100%
+      }
+
+      .pgrid {
+        grid-template-columns: 1fr 1fr;
+        gap: 26px 14px
+      }
+
+      .tile-p button {
+        padding: 6px 6px 10px
+      }
+
+      .tile-p .tt {
+        font-size: 1.25rem
+      }
+
+      .tile-p .tm {
+        font-size: 1rem
+      }
+
+      .cap {
+        font-size: 1.15rem
+      }
+
+      .th .card span {
+        font-size: 1.1rem
+      }
+
+      .th .card {
+        padding: 6px
+      }
+
+      .bubble {
+        font-size: 1rem
+      }
+
+      .strip .panel::before {
+        right: 6px
+      }
+    }
+
+    @media (prefers-reduced-motion:reduce) {
+      html {
+        scroll-behavior: auto
+      }
+
+      .js .pop,
+      .js .pop.in {
+        opacity: 1;
+        transform: rotate(var(--rot, 0deg));
+        transition: none
+      }
+
+      .burst,
+      .star,
+      .next svg,
+      .ticker div {
+        animation: none
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header class="hud"><a class="logo" href="#home">TOMI!</a>
+    <p class="chap" id="chap" aria-live="polite">Hello!</p>
+    <nav class="dots" aria-label="Story chapters"><a href="#home" data-ch="home"
+        aria-label="Hello!"><span>0</span></a><a href="#ch1" data-ch="ch1"
+        aria-label="Where I come from"><span>1</span></a><a href="#ch2" data-ch="ch2"
+        aria-label="How I make games"><span>2</span></a><a href="#games" data-ch="games"
+        aria-label="Pick a level"><span>3</span></a><a href="#wins" data-ch="wins"
+        aria-label="Boss fights won"><span>4</span></a><a href="#contact" data-ch="contact"
+        aria-label="Player 2 wanted"><span>5</span></a></nav>
+    <div class="prog" aria-hidden="true"><i id="bar"></i></div>
+  </header>
+  <main>
+    <section id="home" class="ch yl ht" data-t="Hello!">
+      <div class="wrap hero">
+        <div class="hero-t">
+          <p class="cap pop">Hello, player one!</p>
+          <h1 class="pop" style="--d:.08s">I turn data &amp; ideas into <em>playable</em> games!<svg class="sq"
+              viewBox="0 0 200 14" preserveAspectRatio="none" aria-hidden="true">
+              <path d="M3 8Q15-2 27 8T51 8 75 8 99 8 123 8 147 8 171 8 197 8" fill="none" stroke="currentColor"
+                stroke-width="5" stroke-linecap="round" />
+            </svg></h1>
+          <p class="lede pop" style="--d:.16s">I'm Tomi Timutius, a game designer and Unity/iOS developer. I made
+            Masbook, the Top 1 mobile game at GameSeed 2026.</p>
+          <div class="cta pop" style="--d:.24s"><a class="btn" href="#ch1">Start the story</a><a class="btn alt"
+              href="#games">Jump to the games</a></div>
+        </div>
+        <div class="collage pop" style="--d:.2s">
+          <div id="shots" style="display:contents"></div>
+          <svg class="burst" viewBox="0 0 100 100" aria-hidden="true">
+            <polygon
+              points="50.0,0.0 58.5,13.0 71.7,5.0 73.7,20.3 89.1,18.8 84.2,33.5 98.7,38.9 88.0,50.0 98.7,61.1 84.2,66.5 89.1,81.2 73.7,79.7 71.7,95.0 58.5,87.0 50.0,100.0 41.5,87.0 28.3,95.0 26.3,79.7 10.9,81.2 15.8,66.5 1.3,61.1 12.0,50.0 1.3,38.9 15.8,33.5 10.9,18.8 26.3,20.3 28.3,5.0 41.5,13.0"
+              fill="#ff5c9a" stroke="#1b1626" stroke-width="3" stroke-linejoin="round" />
+          </svg>
+          <p class="burst-t"><b>TOP 1!</b><span>GameSeed 2026<br>Mobile</span></p>
+          <p class="bubble">Psst... scroll down. It's a story!</p>
+          <svg class="star" viewBox="0 0 40 40" aria-hidden="true">
+            <path d="M20 3l4.6 10.6 11.4 1.1-8.6 7.6 2.6 11.2L20 27.6 9.99 33.5l2.6-11.2L4 14.7l11.4-1.1z"
+              fill="currentColor" stroke="#1b1626" stroke-width="2.5" stroke-linejoin="round" />
+          </svg><svg class="star b" viewBox="0 0 40 40" aria-hidden="true">
+            <path d="M20 3l4.6 10.6 11.4 1.1-8.6 7.6 2.6 11.2L20 27.6 9.99 33.5l2.6-11.2L4 14.7l11.4-1.1z"
+              fill="currentColor" stroke="#1b1626" stroke-width="2.5" stroke-linejoin="round" />
+          </svg>
+        </div>
+      </div>
+      <a class="next" href="#ch1"><span>Chapter 1</span><svg viewBox="0 0 60 40" aria-hidden="true">
+          <path d="M4 30C14 6 36 4 52 18M52 18l-14-1M52 18l-4 13" fill="none" stroke="currentColor" stroke-width="4"
+            stroke-linecap="round" stroke-linejoin="round" />
+        </svg></a>
+    </section>
+    <div class="ticker" aria-hidden="true">
+      <div>
+        <span>POW!</span><span>Strategy</span><span>ZAP!</span><span>Systems</span><span>BOOM!</span><span>Balancing</span><span>WOW!</span><span>Prototype</span><span>POW!</span><span>Playtest</span><span>POW!</span><span>Strategy</span><span>ZAP!</span><span>Systems</span><span>BOOM!</span><span>Balancing</span><span>WOW!</span><span>Prototype</span><span>POW!</span><span>Playtest</span>
+      </div>
+    </div>
+
+    <section id="ch1" class="ch pp" data-t="Where I come from">
+      <div class="wrap">
+        <p class="cap pop">Chapter 1</p>
+        <h2 class="pop">Where I come from<svg class="sq" viewBox="0 0 200 14" preserveAspectRatio="none"
+            aria-hidden="true">
+            <path d="M3 8Q15-2 27 8T51 8 75 8 99 8 123 8 147 8 171 8 197 8" fill="none" stroke="currentColor"
+              stroke-width="5" stroke-linecap="round" />
+          </svg></h2>
+        <p class="lead pop">I'm driven by education, sustainability and video games. Games are more than entertainment.
+          They can create impact, so I want to make ones that are fun and still leave something behind.</p>
+        <div class="panels three">
+          <article class="panel pop" style="--rot:-1.5deg">
+            <div class="ic"><svg viewBox="0 0 64 64" aria-hidden="true">
+                <path d="M22 14l-14 18 14 18M42 14l14 18-14 18M37 10l-10 44" fill="none" stroke="#1b1626"
+                  stroke-width="5" stroke-linecap="round" stroke-linejoin="round" />
+              </svg></div>
+            <h3>I build it</h3>
+            <p>Unity and C# for games, Swift and SwiftUI for iOS apps, with CoreML when an app needs to see.</p>
+          </article>
+          <article class="panel pop" style="--rot:1deg;--d:.08s">
+            <div class="ic"><svg viewBox="0 0 64 64" aria-hidden="true">
+                <path d="M32 6l22 12v26L32 58 10 44V18z" fill="#ffd93b" stroke="#1b1626" stroke-width="4"
+                  stroke-linejoin="round" />
+                <path d="M10 18l22 12 22-12M32 30v28" fill="none" stroke="#1b1626" stroke-width="4"
+                  stroke-linejoin="round" />
+              </svg></div>
+            <h3>I draw it</h3>
+            <p>3D art in Blender and 2D animation, so a prototype looks like a game and not a spreadsheet.</p>
+          </article>
+          <article class="panel pop" style="--rot:-.8deg;--d:.16s">
+            <div class="ic"><svg viewBox="0 0 64 64" aria-hidden="true">
+                <path d="M8 10h48v32H30l-12 12v-12H8z" fill="#fff" stroke="#1b1626" stroke-width="4"
+                  stroke-linejoin="round" />
+                <circle cx="20" cy="26" r="3.5" fill="#1b1626" />
+                <circle cx="32" cy="26" r="3.5" fill="#1b1626" />
+                <circle cx="44" cy="26" r="3.5" fill="#1b1626" />
+              </svg></div>
+            <h3>I understand people</h3>
+            <p>Cultural studies taught me to read players, stories and context before I design the rules.</p>
+          </article>
+        </div>
+        <a class="next" href="#ch2"><span>Chapter 2: How I make games</span><svg viewBox="0 0 60 40" aria-hidden="true">
+            <path d="M4 30C14 6 36 4 52 18M52 18l-14-1M52 18l-4 13" fill="none" stroke="currentColor" stroke-width="4"
+              stroke-linecap="round" stroke-linejoin="round" />
+          </svg></a>
+      </div>
+    </section>
+
+    <section id="ch2" class="ch cy ht" data-t="How I make games">
+      <div class="wrap">
+        <p class="cap pop">Chapter 2</p>
+        <h2 class="pop">How I make games<svg class="sq" viewBox="0 0 200 14" preserveAspectRatio="none"
+            aria-hidden="true">
+            <path d="M3 8Q15-2 27 8T51 8 75 8 99 8 123 8 147 8 171 8 197 8" fill="none" stroke="currentColor"
+              stroke-width="5" stroke-linecap="round" />
+          </svg></h2>
+        <p class="lead pop">Every idea starts as a feeling I want the player to have. Then I follow the same four steps,
+          and I let the numbers keep me honest.</p>
+        <ol class="strip">
+          <li class="panel pop" style="--rot:-1deg">
+            <div class="ic"><svg viewBox="0 0 64 64" aria-hidden="true">
+                <path d="M32 8a16 16 0 0 0-9 29c2 2 3 4 3 7h12c0-3 1-5 3-7A16 16 0 0 0 32 8z" fill="#ffd93b"
+                  stroke="#1b1626" stroke-width="4" stroke-linejoin="round" />
+                <path d="M26 52h12M28 58h8M32 0v0M8 22l-5-2M56 22l5-2M14 8l-3-4M50 8l3-4" fill="none" stroke="#1b1626"
+                  stroke-width="4" stroke-linecap="round" />
+              </svg></div>
+            <h3>Concept</h3>
+            <p>Start from a player feeling, then write the loop that creates it.</p>
+          </li>
+          <li class="panel pop" style="--rot:1.2deg;--d:.07s">
+            <div class="ic"><svg viewBox="0 0 64 64" aria-hidden="true">
+                <rect x="8" y="10" width="48" height="44" rx="10" fill="#ff5c9a" stroke="#1b1626" stroke-width="4" />
+                <path d="M27 22l16 10-16 10z" fill="#fff" stroke="#1b1626" stroke-width="4" stroke-linejoin="round" />
+              </svg></div>
+            <h3>Prototype</h3>
+            <p>Code it fast so the idea can be played this week.</p>
+          </li>
+          <li class="panel pop" style="--rot:-.7deg;--d:.14s">
+            <div class="ic"><svg viewBox="0 0 64 64" aria-hidden="true">
+                <rect x="8" y="34" width="12" height="22" fill="#3cc8ff" stroke="#1b1626" stroke-width="4" />
+                <rect x="26" y="20" width="12" height="36" fill="#ffd93b" stroke="#1b1626" stroke-width="4" />
+                <rect x="44" y="8" width="12" height="48" fill="#ff5c9a" stroke="#1b1626" stroke-width="4" />
+              </svg></div>
+            <h3>Test with data</h3>
+            <p>Run AI-assisted testing and read the numbers, not just opinions.</p>
+          </li>
+          <li class="panel pop" style="--rot:1.5deg;--d:.21s">
+            <div class="ic"><svg viewBox="0 0 64 64" aria-hidden="true">
+                <path d="M8 24L56 36" stroke="#1b1626" stroke-width="5" stroke-linecap="round" />
+                <path d="M32 30l-10 26h20z" fill="#b9a2ff" stroke="#1b1626" stroke-width="4" stroke-linejoin="round" />
+                <circle cx="12" cy="14" r="8" fill="#ffd93b" stroke="#1b1626" stroke-width="4" />
+                <circle cx="52" cy="26" r="8" fill="#3cc8ff" stroke="#1b1626" stroke-width="4" />
+              </svg></div>
+            <h3>Balance</h3>
+            <p>Adjust until the game is fair, tense and worth replaying.</p>
+          </li>
+        </ol>
+        <a class="next" href="#games"><span>Chapter 3: The levels</span><svg viewBox="0 0 60 40" aria-hidden="true">
+            <path d="M4 30C14 6 36 4 52 18M52 18l-14-1M52 18l-4 13" fill="none" stroke="currentColor" stroke-width="4"
+              stroke-linecap="round" stroke-linejoin="round" />
+          </svg></a>
+      </div>
+    </section>
+
+    <section id="games" class="ch pk" data-t="Pick a level">
+      <div class="wrap">
+        <p class="cap pop">Chapter 3</p>
+        <h2 class="pop">Pick a level<svg class="sq" viewBox="0 0 200 14" preserveAspectRatio="none" aria-hidden="true">
+            <path d="M3 8Q15-2 27 8T51 8 75 8 99 8 123 8 147 8 171 8 197 8" fill="none" stroke="currentColor"
+              stroke-width="5" stroke-linecap="round" />
+          </svg></h2>
+        <p class="lead pop">Here is everything I've made so far. Click a card for screenshots, the full story and links
+          to play.</p>
+        <div class="filters pop" role="group" aria-label="Filter projects"><button type="button" data-f="all"
+            aria-pressed="true">All</button><button type="button" data-f="game"
+            aria-pressed="false">Games</button><button type="button" data-f="ios" aria-pressed="false">iOS
+            app</button><button type="button" data-f="video" aria-pressed="false">Video</button><button type="button"
+            data-f="3d" aria-pressed="false">3D art</button></div>
+        <ul class="pgrid" id="pgrid"></ul>
+        <a class="next" href="#wins"><span>Chapter 4: The wins</span><svg viewBox="0 0 60 40" aria-hidden="true">
+            <path d="M4 30C14 6 36 4 52 18M52 18l-14-1M52 18l-4 13" fill="none" stroke="currentColor" stroke-width="4"
+              stroke-linecap="round" stroke-linejoin="round" />
+          </svg></a>
+      </div>
+    </section>
+
+    <section id="wins" class="ch lp ht" data-t="Boss fights won">
+      <div class="wrap">
+        <p class="cap pop">Chapter 4</p>
+        <h2 class="pop">Boss fights won<svg class="sq" viewBox="0 0 200 14" preserveAspectRatio="none"
+            aria-hidden="true">
+            <path d="M3 8Q15-2 27 8T51 8 75 8 99 8 123 8 147 8 171 8 197 8" fill="none" stroke="currentColor"
+              stroke-width="5" stroke-linecap="round" />
+          </svg></h2>
+        <p class="lead pop">A few moments where the games and the team got noticed.</p>
+        <ul class="badges">
+          <li class="pop" style="--rot:-2deg"><svg viewBox="0 0 100 100" aria-hidden="true">
+              <polygon
+                points="50.0,0.0 58.5,13.0 71.7,5.0 73.7,20.3 89.1,18.8 84.2,33.5 98.7,38.9 88.0,50.0 98.7,61.1 84.2,66.5 89.1,81.2 73.7,79.7 71.7,95.0 58.5,87.0 50.0,100.0 41.5,87.0 28.3,95.0 26.3,79.7 10.9,81.2 15.8,66.5 1.3,61.1 12.0,50.0 1.3,38.9 15.8,33.5 10.9,18.8 26.3,20.3 28.3,5.0 41.5,13.0"
+                fill="#ffd93b" stroke="#1b1626" stroke-width="3" stroke-linejoin="round" />
+            </svg>
+            <div><b>Top 1</b><span>Mobile game, GameSeed 2026. Masbook, designed with Summerland Games.</span></div>
+          </li>
+          <li class="pop" style="--rot:1.5deg;--d:.08s"><svg viewBox="0 0 100 100" aria-hidden="true">
+              <polygon
+                points="50.0,0.0 58.5,13.0 71.7,5.0 73.7,20.3 89.1,18.8 84.2,33.5 98.7,38.9 88.0,50.0 98.7,61.1 84.2,66.5 89.1,81.2 73.7,79.7 71.7,95.0 58.5,87.0 50.0,100.0 41.5,87.0 28.3,95.0 26.3,79.7 10.9,81.2 15.8,66.5 1.3,61.1 12.0,50.0 1.3,38.9 15.8,33.5 10.9,18.8 26.3,20.3 28.3,5.0 41.5,13.0"
+                fill="#3cc8ff" stroke="#1b1626" stroke-width="3" stroke-linejoin="round" />
+            </svg>
+            <div><b>Fan fave</b><span>Audience favorite at the Moscow-Indonesia game jam. Warmth &amp; Whistles, built
+                in 2 days.</span></div>
+          </li>
+          <li class="pop" style="--rot:-1deg;--d:.16s"><svg viewBox="0 0 100 100" aria-hidden="true">
+              <polygon
+                points="50.0,0.0 58.5,13.0 71.7,5.0 73.7,20.3 89.1,18.8 84.2,33.5 98.7,38.9 88.0,50.0 98.7,61.1 84.2,66.5 89.1,81.2 73.7,79.7 71.7,95.0 58.5,87.0 50.0,100.0 41.5,87.0 28.3,95.0 26.3,79.7 10.9,81.2 15.8,66.5 1.3,61.1 12.0,50.0 1.3,38.9 15.8,33.5 10.9,18.8 26.3,20.3 28.3,5.0 41.5,13.0"
+                fill="#ff5c9a" stroke="#1b1626" stroke-width="3" stroke-linejoin="round" />
+            </svg>
+            <div><b>On stage</b><span>IGDX 2026 showcase with Summerland Games</span></div>
+          </li>
+        </ul>
+        <dl class="nums">
+          <div class="pop">
+            <dt>14</dt>
+            <dd>projects on itch.io, from 2-day game jam entries to a store release</dd>
+          </div>
+          <div class="pop">
+            <dt>18</dt>
+            <dd>projects across different fields</dd>
+          </div>
+          <div class="pop" style="--d:.08s">
+            <dt>3</dt>
+            <dd>places to play: the browser, Google Play and the App Store</dd>
+          </div>
+          <!-- <div class="pop" style="--d:.16s"><dt>1</dt><dd>very happy cat named Apoy, star of Ramboo Cat</dd></div> -->
+        </dl>
+        <a class="next" href="#contact"><span>Final chapter</span><svg viewBox="0 0 60 40" aria-hidden="true">
+            <path d="M4 30C14 6 36 4 52 18M52 18l-14-1M52 18l-4 13" fill="none" stroke="currentColor" stroke-width="4"
+              stroke-linecap="round" stroke-linejoin="round" />
+          </svg></a>
+      </div>
+    </section>
+
+    <section id="contact" class="ch yl ht" data-t="Player 2 wanted">
+      <div class="wrap ct">
+        <div class="ct-t">
+          <p class="cap pop">Final chapter</p>
+          <h2 class="pop">Player 2 wanted!<svg class="sq" viewBox="0 0 200 14" preserveAspectRatio="none"
+              aria-hidden="true">
+              <path d="M3 8Q15-2 27 8T51 8 75 8 99 8 123 8 147 8 171 8 197 8" fill="none" stroke="currentColor"
+                stroke-width="5" stroke-linecap="round" />
+            </svg></h2>
+          <p class="lead pop">Got a game that needs a designer, a jam team that needs a teammate, or an idea that needs
+            a prototype? Let's team up.</p>
+          <div class="cta pop"><a class="btn" href="mailto:tomitimotius92@gmail.com">tomitimotius92@gmail.com</a></div>
+          <div class="soc pop"><a class="btn alt" href="https://www.linkedin.com/in/tomitimutius/" target="_blank"
+              rel="noopener">LinkedIn</a><a class="btn alt" href="https://www.instagram.com/tomi_571/" target="_blank"
+              rel="noopener">Instagram</a><a class="btn alt" href="https://kurak57.itch.io/" target="_blank"
+              rel="noopener">itch.io</a><a class="btn alt" href="https://github.com/kurak57" target="_blank"
+              rel="noopener">GitHub</a></div>
+          <p class="small pop">Based in Indonesia. Usually found prototyping something.</p>
+        </div>
+        <figure class="me pop" style="--rot:3deg"><img alt="Portrait of Tomi Timutius" src="Images/web/tomi.png"
+            id="portrait">
+          <figcaption>Player 1: Tomi</figcaption><svg class="star" viewBox="0 0 40 40" aria-hidden="true">
+            <path d="M20 3l4.6 10.6 11.4 1.1-8.6 7.6 2.6 11.2L20 27.6 9.99 33.5l2.6-11.2L4 14.7l11.4-1.1z"
+              fill="currentColor" stroke="#1b1626" stroke-width="2.5" stroke-linejoin="round" />
+          </svg>
+        </figure>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <p class="tbc">TO BE CONTINUED...</p>
+    <p class="small">© 2026 Tomi Timutius. Game art belongs to its teams. <a href="#home">Back to the start</a></p>
+  </footer>
+  <div id="dialogs"></div>
+  <script>const INLINE = null;
+    (async () => {
+      const $ = (s, r = document) => r.querySelector(s), $$ = (s, r = document) => [...r.querySelectorAll(s)];
+      const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+      /* ---- render everything from data.json ---- */
+      const E = s => String(s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+      const SRC = u => (typeof IMGS !== 'undefined' && IMGS[u]) || u;
+      const isRemote = u => /^https?:/.test(u);
+      const T = { 1: 'cy', 2: 'pk', 3: 'yl', 4: 'li' };
+      const first = s => (s.match(/^(.+?[.!?])(\s|$)/) || [0, s])[1];
+      const card = p => `<div class="card ${T[p.tone]}"><b>${E(p.title)}</b><span>${E(p.tag || p.categoryDisplay)}</span></div>`;
+      const pic = (u, alt) => isRemote(u)
+        ? `<img hidden alt="${E(alt)}" referrerpolicy="no-referrer" src="${E(u)}" onload="this.hidden=false;if(this.previousElementSibling)this.previousElementSibling.remove()" onerror="this.remove()">`
+        : `<img alt="${E(alt)}" decoding="async" src="${E(SRC(u))}">`;
+      const thumb = p => !p.thumbImage ? card(p) : isRemote(p.thumbImage) ? card(p) + pic(p.thumbImage, p.title + ' screenshot') : pic(p.thumbImage, p.title + ' screenshot');
+      const ROT = [-1.6, 1.2, -.8, 1.8, -1.2, .9, -1.9, 1.4];
+      const tile = (p, i) => `<li class="tile-p pop" id="p-${p.id}" data-cat="${p.category}" style="--rot:${ROT[i % 8]}deg;--d:${((i % 5) * .05).toFixed(2)}s"><button type="button" data-open="${p.id}" aria-label="Open ${E(p.title)}"><span class="th">${thumb(p)}</span>${p.sticker ? `<span class="sticker" aria-hidden="true">${E(p.sticker)}</span>` : ''}<span class="tt">${E(p.title)}</span><span class="tm">${E(p.categoryDisplay)}</span></button></li>`;
+      function dialog(p) {
+        const local = p.images.length && !isRemote(p.images[0]);
+        const gal = local ? p.images.map(u => `<div>${pic(u, p.title + ' screenshot')}</div>`).join('') : `<div>${card(p)}</div>` + p.images.map(u => `<div>${pic(u, p.title + ' screenshot')}</div>`).join('');
+        const links = p.links.map(l => `<a class="btn mini" href="${E(l.url)}" target="_blank" rel="noopener">${E(l.label)}</a>`).join('') + (p.repoLink ? `<a class="btn mini alt" href="${E(p.repoLink)}" target="_blank" rel="noopener">Source code</a>` : '');
+        const who = [p.role, p.team].filter(Boolean).join(' · ');
+        return `<dialog id="d-${p.id}" aria-labelledby="dt-${p.id}"><div class="dl"><button class="x" type="button" data-close>Close</button><h2 id="dt-${p.id}">${E(p.title)}</h2><p class="cat">${E(p.categoryDisplay)} · ${E(p.recognition)}</p><div class="gal${p.portrait ? ' tall' : ''}">${gal}</div><p>${E(p.desc)}</p><ul>${p.features.map(f => `<li>${E(f)}</li>`).join('')}</ul>${p.tech.length ? `<p class="small">Built with ${E(p.tech.join(', '))}</p>` : ''}${who ? `<p class="small">${E(who)}</p>` : ''}<div class="meta">${links}</div></div></dialog>`;
+      }
+      let DATA;
+      try { DATA = INLINE || await (await fetch('data.json')).json() }
+      catch (e) { $('#pgrid').innerHTML = '<li class="err">Could not load data.json. Open this site through a web server (for example run "python -m http.server" in this folder) or host it online.</li>'; DATA = [] }
+      if (DATA.length) {
+        $('#pgrid').innerHTML = DATA.map(tile).join('');
+        $('#dialogs').innerHTML = DATA.map(dialog).join('');
+        const RR = ['-8deg', '-3deg', '3deg', '8deg'];
+        const cardAlt = (p, t) => `<div class="card ${T[p.tone]}"><p class="q">${E(t)}</p><span>${E(p.title)}</span></div>`;
+        const heroes = DATA.flatMap(p => (p.heroImages || []).map(u => ({ p, u }))).slice(0, 4);
+        $('#shots').innerHTML = heroes.map((h, i) => `<figure class="shot s${i}" style="--r:${RR[i]}" data-open="${E(h.p.id)}" role="button" tabindex="0" aria-label="Open ${E(h.p.title)}"><div class="ph">${isRemote(h.u) ? (i ? cardAlt(h.p, h.p.features[(i - 1) % h.p.features.length]) : card(h.p)) : ''}${pic(h.u, h.p.title + ' screenshot')}</div></figure>`).join('');
+      }
+
+      /* pop-in on scroll */
+      const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target) } }), { threshold: .12 });
+      $$('.pop').forEach(el => io.observe(el));
+      /* story HUD: progress + current chapter */
+      const secs = $$('.ch'), bar = $('#bar'), chap = $('#chap'), dots = $$('.dots a');
+      function hud() {
+        const H = document.documentElement.scrollHeight - innerHeight, y = scrollY;
+        bar.style.width = (Math.min(1, y / Math.max(H, 1)) * 100) + '%';
+        const mid = y + innerHeight * .4; let cur = secs[0]; secs.forEach(s => { if (s.offsetTop <= mid) cur = s });
+        if (chap.textContent !== cur.dataset.t) chap.textContent = cur.dataset.t;
+        dots.forEach(a => a.classList.toggle('on', a.dataset.ch === cur.id));
+      }
+      addEventListener('scroll', hud, { passive: true }); addEventListener('resize', hud); hud();
+      /* filters */
+      $$('.filters button').forEach(b => b.addEventListener('click', () => {
+        $$('.filters button').forEach(x => x.setAttribute('aria-pressed', x === b));
+        const f = b.dataset.f; $$('.tile-p').forEach(el => { el.hidden = f !== 'all' && el.dataset.cat !== f });
+      }));
+      /* details */
+      $$('[data-open]').forEach(b => {
+        b.addEventListener('click', () => $('#d-' + b.dataset.open).showModal());
+        b.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); $('#d-' + b.dataset.open).showModal() } });
+      });
+      $$('dialog').forEach(d => { d.addEventListener('click', e => { if (e.target === d) d.close() }); $('[data-close]', d).addEventListener('click', () => d.close()) });
+    })();
+  </script>
+</body>
+
+</html>
